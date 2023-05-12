@@ -1,5 +1,6 @@
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 
@@ -27,14 +28,14 @@ const UpdateChocolate = () => {
         })
         .then(res =>res.json())
         .then(data =>{
-            // if(data.acknowledged)
-            // Swal.fire({
-            //     position: 'top-middle',
-            //     icon: 'success',
-            //     title: 'Your work has been saved',
-            //     showConfirmButton: false,
-            //     timer: 1500
-            //   })
+            if(data.acknowledged)
+            Swal.fire({
+                position: 'top-middle',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+              })
               console.log(data)
         })
 

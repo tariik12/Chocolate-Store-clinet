@@ -101,10 +101,17 @@ const AddChocolate = () => {
                 <span className="label-text">Category :</span>
                 </label>
                 <label className="input-group">
-                <input type="text" placeholder="Enter Category" name="category" className="input input-bordered w-full " />
+                <select className="select select-bordered w-full"
                 
-                </label>
+                >
+                    <option disabled selected name="category"> Select  category</option>
+                    
+                    <option>Premium</option>
+                    <option>Free</option>
+                </select>
+                </label>     
             </div>
+
            <div className="form-control  w-7/12 mx-auto">
                 <label className="label">
                 <span className="label-text">Photo:</span>
